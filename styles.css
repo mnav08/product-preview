@@ -160,3 +160,7 @@ img {
   color: var(--color-white);
   font-weight: 700;
 }
+.cta-btn:hover,
+.cta-btn:focus-visible {
+  background-color: var(--color-primary-700);
+}
