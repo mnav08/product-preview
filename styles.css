@@ -34,6 +34,19 @@ html {
   scroll-behavior: smooth;
 }
 
+main {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 48rem) {
+  main {
+    padding: 12rem;
+  }
+}
+
 body {
   min-height: 100vh;
   background-color: var(--bg-default);
@@ -54,6 +67,11 @@ img {
   max-width: 100%;
   height: auto;
   border-radius: 0.5rem 0.5rem 0 0;
+}
+@media (min-width: 48rem) {
+  img {
+    border-radius: 0.5rem 0 0 0.5rem;
+  }
 }
 
 /* Utility helpers */
@@ -88,6 +106,29 @@ img {
 .product {
   background-color: var(--color-white);
   border-radius: 0 0 0.5rem 0.5rem;
+  max-width: 730px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+@media (min-width: 48rem) {
+  .product {
+    display: flex;
+    border-radius: 0.5rem;
+    align-items: center;
+  }
+  .product > picture,
+  .product > .wrapper {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+}
+
+.product picture {
+  display: flex;
+  justify-content: center;
+}
+.product picture img {
+  width: 100%;
 }
 
 .wrapper {
